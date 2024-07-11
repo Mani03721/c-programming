@@ -113,3 +113,30 @@ int main()
     return 0;
 }
 
+6.Palindrome
+
+#include <stdio.h>
+
+void main()
+{
+    int num,rem=0,digit,num1;
+    scanf("%d",&num);
+    num1=num;
+while(num!=0)
+{
+    digit=num%10;
+    rem*=10;
+    rem+=digit;
+    num/=10;
+}
+if(num1==rem)
+{
+    printf("pallendrome");
+}
+else
+{
+    printf("not a pallendrome");
+}
+}
+
+
