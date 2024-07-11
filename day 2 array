@@ -228,3 +228,28 @@ int main()
 }
 
 9) Insert the value at given position
+
+#include <stdio.h>
+
+int main()
+{
+   int n,i,pos,j,val,a[100];
+   scanf("%d",&n);
+   for(i=0;i<n;i++){
+       scanf("%d",&a[i]);
+   }
+   printf("position:");
+   scanf("%d",&pos);
+   printf("value:");
+   scanf("%d",&val);
+   for(i=n;i>=pos;i--){
+       for(j=i+1;j>i;j--){
+           a[j]=a[i];
+       }
+      a[pos]=val; 
+   }
+   for(i=0;i<n;i++){
+       printf("%d\t",a[i]);
+   }
+       return 0;
+}
