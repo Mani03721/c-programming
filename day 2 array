@@ -229,6 +229,14 @@ int main()
 
 9) Insert the value at given position
 
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
 #include <stdio.h>
 
 int main()
@@ -246,8 +254,9 @@ int main()
        for(j=i+1;j>i;j--){
            a[j]=a[i];
        }
-      a[pos]=val; 
    }
+      a[pos]=val; 
+      n+=1;
    for(i=0;i<n;i++){
        printf("%d\t",a[i]);
    }
