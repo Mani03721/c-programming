@@ -1,0 +1,94 @@
+In the bustling market town of Numeria, the town's chief mathematician, Avis, is faced with a unique challenge. The merchants of Numeria, always keen on trading and bartering, want to know how many ways they can pair their goods such that the total value of each pair is divisible by a certain number, K. They bring an array of integers to represent the values of their goods and ask Avis to find the number of valid pairs.
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,key,i,j,count=0,num;
+    scanf("%d",&n);
+    int a[n];
+    scanf("%d",&key);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            num=a[i]+a[j];
+            if((num%key)==0)
+                count+=1;
+        }
+    }
+    printf("%d",count);
+    return 0;
+}
+
+2. Rotate the Given array based on the second integer number of time.
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+      int n,i,temp,rotate,num;
+    scanf("%d",&n);
+    int a[n];
+
+    scanf("%d",&rotate);
+        for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(num=0;num<rotate;num++){
+        temp=a[n-1];
+    for(i=n-1;i>0;i--){
+        
+        a[i]=a[i-1];
+    }
+    a[0]=temp;
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    return 0;
+}
+3.To find the K th largest element in a given array
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int i,j,n,temp,pos;
+    scanf("%d %d",&n,&pos);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            if(a[i]>a[j]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<n;i++){
+        if(a[n-pos]==a[i]){
+            printf("%d",a[i]);
+        }
+    }
+    return 0;
+        
+    
+}
